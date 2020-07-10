@@ -68,7 +68,7 @@ def get_blog_post_url(search_blog_keyword, display_count, search_result_blog_pag
                     blog_post_url = response_body_dict['items'][j]['link'].replace("amp;", "")
                     blog_post_url = blog_post_url.replace("https://blog.naver.com/", "https://m.blog.naver.com/PostView.nhn?blogId=").split('?')
                     blog_post_url = blog_post_url[0] + '?' + blog_post_url[1] + '&logNo=' + blog_post_url[-1].split('=')[-1]
-                    print(blog_post_url)
+                    # print(blog_post_url)
                     f.write(blog_post_url + '\n')
                 except:
                     j += 1
